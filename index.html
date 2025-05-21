@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kannada Object Detector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔍 Kannada Object Detector</h1>
+      <p>Upload an image to detect objects and get Kannada &amp; Kanglish translations.</p>
+    </header>
+
+    <!-- Upload Section -->
+    <section class="upload-section">
+      <label class="upload-btn" for="imageUpload">
+        📷 Upload Image
+      </label>
+      <input type="file" id="imageUpload" accept="image/*" style="display: none;" />
+    </section>
+
+    <!-- Image Display -->
+    <section class="image-container">
+      <img id="uploadedImage" alt="Uploaded Image" style="display: none;" />
+    </section>
+
+    <!-- Results Section -->
+    <section class="result">
+      <h3>📝 Detected Objects:</h3>
+      <ul id="detectedObjects"></ul>
+    </section>
+
+    <!-- Speak Button -->
+    <button id="speakBtn" disabled>🔊 Pronounce Translation</button>
+
+    <!-- Loading Indicator -->
+    <div id="loading" style="display: none;">⏳ Processing...</div>
+  </div>
+
+  <!-- TensorFlow & COCO-SSD -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+  <script src="script.js"></script>
+</body>
+</html>
